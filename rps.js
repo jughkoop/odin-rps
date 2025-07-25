@@ -13,30 +13,42 @@ function playGame() {
             if (computerChoice === "paper") {
                 console.log("You lose! Paper beats Rock.")
                 computerScore++;
+                console.log("Your Score: " + humanScore);
+                console.log("Computer Score: " + computerScore);
             }
             else {
                 console.log("You win! Rock beats Scissors.")
                 humanScore++;
+                console.log("Your Score: " + humanScore);
+                console.log("Computer Score: " + computerScore);
             }
         }
         else if (humanChoice === "paper") {
             if (computerChoice === "rock") {
                 console.log("You win! Paper beats Rock.")
                 humanScore++;
+                console.log("Your Score: " + humanScore);
+                console.log("Computer Score: " + computerScore);
             }
             else {
                 console.log("You lose! Scissors beats Paper.")
                 computerScore++;
+                console.log("Your Score: " + humanScore);
+                console.log("Computer Score: " + computerScore);
             }
         }
         else if (humanChoice === "scissors") {
             if (computerChoice === "rock") {
                 console.log("You lose! Rock beats Scissors.")
                 computerScore++;
+                console.log("Your Score: " + humanScore);
+                console.log("Computer Score: " + computerScore);
             }
             else {
                 console.log("You win! Scissors beats Paper.")
                 humanScore++;
+                console.log("Your Score: " + humanScore);
+                console.log("Computer Score: " + computerScore);
             }
         }
     }
@@ -54,8 +66,8 @@ function playGame() {
     else {
         console.log("YOU LOSE")
     }
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log("Your Score: " + humanScore);
+    console.log("Computer Score: " + computerScore);
 }
 
 function getComputerChoice() {
