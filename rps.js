@@ -73,5 +73,5 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    return toLowerCase(prompt("Please enter Rock, Paper, or Scissors: "));
+    return prompt("Please enter Rock, Paper, or Scissors: ").toLowerCase();
 }
