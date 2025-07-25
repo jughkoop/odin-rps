@@ -5,11 +5,7 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
-        if (humanChoice === computerChoice) {
-            console.log("Tie! Try again.")
-            playRound(getHumanChoice, computerChoice);
-        }
-        else if (humanChoice === "rock") {
+        if (humanChoice === "rock") {
             if (computerChoice === "paper") {
                 console.log("You lose! Paper beats Rock.")
                 computerScore++;
@@ -56,6 +52,12 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
+
+        while (humanChoice === computerChoice) {
+            console.log("Tie! Try again.");
+            humanChoice = getHumanChoice();
+            computerChoice = getComputerChoice();
+        }
 
         playRound(humanChoice, computerChoice);
     }
